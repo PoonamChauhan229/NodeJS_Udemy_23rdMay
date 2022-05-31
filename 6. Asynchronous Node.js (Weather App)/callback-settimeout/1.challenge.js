@@ -12,7 +12,7 @@ add(1,4,(sum)=>{
 
 function add(a,b,callback){
     setTimeout(()=>{
-         const sum=a+b;
+        var sum=a+b;
         callback(sum)
     },2000)
 }
