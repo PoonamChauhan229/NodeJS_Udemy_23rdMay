@@ -13,13 +13,10 @@ request({url:url,json:true},(error,response)=>{
         callback(undefined,{
             latitude:response.body.features[0].center[0],
             longitude:response.body.features[0].center[1],
-            location:response.body.features.place_name
+            location:response.body.features[0].place_name
         })
     }
 })
 }
-geoCode("12whatyuo",(error,data)=>{
-// geoCode("New York",(error,data)=>{
-    console.log("Error",error)
-    console.log("Data",data)
-})
+
+module.exports=geoCode;
